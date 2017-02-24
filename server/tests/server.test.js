@@ -184,7 +184,7 @@ describe('PATCH /todos/:id', () => {
 			.end(done);
 	});
 
-	it('should not update a todo created by another user', (done) => {
+	it('should not update the todo created by other user', (done) => {
 		var hexId = todos[0]._id.toHexString();
 		var text = 'beat up martin';
 		request(app)
